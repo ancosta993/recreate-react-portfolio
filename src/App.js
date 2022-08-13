@@ -1,7 +1,8 @@
 import './App.css';
 import React, {useState} from 'react';
 import Header from './components/Header';
-import Nav from './components/Nav'
+import PortfolioPage from './components/PortfolioPage';
+import Nav from './components/Nav';
 
 
 function App() {
@@ -12,19 +13,27 @@ function App() {
    }
 
   return (
-    <div>
+    <>
       {showStartPage ? (
         <Header 
           showStartPage={showStartPage} 
           setShowStartPage={setShowStartPage}>
         </Header>
       ):(
-        <Nav 
-          currentPage={currentPage} 
-          handleCurrentPage={handleCurrentPage}>
-        </Nav>
+        <>
+          <Nav 
+              currentPage={currentPage} 
+              handleCurrentPage={handleCurrentPage}>
+          </Nav>
+          <main>
+            <PortfolioPage
+              currentPage={currentPage} 
+              handleCurrentPage={handleCurrentPage}>
+            </PortfolioPage>
+          </main>
+        </>       
       )}
-    </div>
+    </>
     
   );
 }
