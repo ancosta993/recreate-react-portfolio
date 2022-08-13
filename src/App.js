@@ -1,23 +1,31 @@
 import './App.css';
+import React, {useState} from 'react';
+import Header from './components/Header';
+import Nav from './components/Nav'
+
 
 function App() {
+  const [showStartPage , setShowStartPage] = useState(true);
+  const [currentPage, setCurrentPage] = useState('About');
+   const handleCurrentPage = (page) => {
+      setCurrentPage(page);
+   }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {showStartPage ? (
+        <Header 
+          showStartPage={showStartPage} 
+          setShowStartPage={setShowStartPage}>
+        </Header>
+      ):(
+        <Nav 
+          currentPage={currentPage} 
+          handleCurrentPage={handleCurrentPage}>
+        </Nav>
+      )}
     </div>
+    
   );
 }
 
