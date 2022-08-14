@@ -10,6 +10,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height:100%;
+  margin:0;
+  padding:0;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 90%;
+  padding: 50px 30px;
 }
 
 code {
@@ -23,6 +32,7 @@ code {
   align-items:center;
   justify-content:center;
 }
+
 
 /* nav styles */
 header{
@@ -69,6 +79,9 @@ nav{
 .nav-link-active{
   border-bottom: solid 2px black;
 }
+
+/* about page style */
+
 
 /* reset default styles */
 li{
