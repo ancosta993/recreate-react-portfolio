@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Header from './components/Header';
 import PortfolioPage from './components/PortfolioPage';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               handleCurrentPage={handleCurrentPage}>
             </PortfolioPage>
           </main>
+          <Footer></Footer>
         </>       
       )}
     </>
