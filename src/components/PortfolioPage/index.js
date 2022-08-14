@@ -10,7 +10,7 @@ function portfolioPage({currentPage, handleCurrentPage}){
    const renderPage = () => {
       if (currentPage === 'About') {
          return <About />
-      } else if (currentPage === 'Project') {
+      } else if (currentPage === 'Projects') {
          return <Projects />
       } else if (currentPage === 'Contacts') {
          return <Contacts />

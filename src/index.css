@@ -8,6 +8,7 @@
   --secondary:#622569;
   --tertiary: #5b9aa0;
   --light:#d6d4e0;
+  --shadow:rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 body {
@@ -146,7 +147,7 @@ nav{
   width:50%;
   margin:auto;
   border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: var(--shadow)
 }
 
 .form-title{
@@ -164,12 +165,74 @@ nav{
   border:solid 2px var(--tertiary);
   background-color: var(--primary);
   border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: var(--shadow);
   padding:1rem 2rem 1rem 2rem;
   color:var(--secondary);
   width:40%;
   margin:auto 10% auto 10%;
 }
+
+/* project style */
+.project-container{
+  background-color: var(--primary);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  padding:10px;
+}
+
+.photo-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5rem;
+  justify-content: center;
+}
+.photo{
+  margin:0;
+  padding:0;
+  position:relative;
+}
+
+
+.photo img{
+  margin:0;
+  width:20em;
+  height:12em;
+  border-radius:1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.photo:hover {
+  cursor: pointer;
+}
+
+.photo:hover .photo-img{
+  opacity: 0.1;
+}
+
+.photo:hover .photo-text{
+  opacity:1;
+}
+
+
+.photo-text{
+  opacity: 0;
+  color:var(--secondary);
+  font-weight: 700;
+  font-size:1.8rem;
+  margin:0;
+  padding:0;
+  position: absolute;
+  top:25%;
+  left:10%;
+}
+
+
+.photo-text a{
+  display:block;
+  font-size: 1rem;
+  font-weight:500;
+}
+
 
 /* reset default styles */
 input{
@@ -204,6 +267,7 @@ li{
 
 a{
   text-decoration: none;
+  color:inherit;
 }
 
 /* media queries */
