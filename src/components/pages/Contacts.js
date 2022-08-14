@@ -52,7 +52,7 @@ function Contacts(){
                   <p>{errorMessage}</p>
                </div>
             )}
-            <button className='btn form-submit-btn' type='submit'>Submit</button>
+            <button className='btn form-submit-btn' type= 'submit'>Submit</button>
          </form>
       </section>
    )
