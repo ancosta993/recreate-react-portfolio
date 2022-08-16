@@ -83,9 +83,27 @@ code {
 }
 
 /* nav styles */
+
+/* @keyframes header-appear {
+  0% {
+    width:0;
+  }
+  
+  50% {
+    width: 50%;
+  }
+  
+  100% {
+    width:100%;
+  }
+
+} */
+
 header{
   background-color:var(--primary);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* animation: header-appear ease 1s;
+  animation-timing-function: linear; */
 }
 
 .nav-tabs{
@@ -252,10 +270,31 @@ nav{
   gap:5rem;
   justify-content: center;
 }
+
+@keyframes projects-appear {
+  0% {
+    transform: translate(-100%, 100%) scale(0.5);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+@keyframes projects-appear-left {
+  0% {
+    transform: translate(100%, 100%) scale(0.5);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
 .photo{
   margin:0;
   padding:0;
   position:relative;
+  /* animation: projects-appear ease-in 1s;
+  animation-timing-function: linear; */
 }
 
 
@@ -266,6 +305,15 @@ nav{
   border-radius:1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: all ease .4s;
+}
+
+.photo:nth-child(2n){
+  animation: projects-appear-left ease-in 1s;
+  animation-timing-function: linear;
+}
+.photo:nth-child(2n+1){
+  animation: projects-appear ease-in 1s;
+  animation-timing-function: linear;
 }
 
 .photo:hover {
