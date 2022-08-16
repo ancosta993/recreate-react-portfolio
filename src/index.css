@@ -149,6 +149,20 @@ nav{
 }
 
 /* about page style */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+
+}
+
+
 .about-container{
   color:var(--light);
   background-color:var(--secondary);
@@ -159,7 +173,19 @@ nav{
   padding-bottom:5px;
   padding-left:10%;
   padding-right:10%;
+  animation: appear ease-in 0.5s
 }
+
+.about-text{
+  animation: appear ease-in 1s;
+}
+
+/* for test atm */
+.about-container-disappear{
+  animation: appear ease-in 0.5s;
+  animation-direction: reverse;
+}
+/* for test atm */
 
 .icon-container{
   display:flex;
