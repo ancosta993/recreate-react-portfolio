@@ -44,6 +44,29 @@ code {
   transform: translate(0, 150%);
 }
 
+/* starting page btn animation */
+@keyframes borderAnimation {
+  0% {
+    border: solid 3px var(--primary);
+  }
+
+  50%{
+    border: solid 3px var(--tertiary);
+  }
+
+  100% {
+    border:solid 3px var(--light);
+  }
+}
+
+.startPageBtn{
+  animation-name: borderAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+
+
 /* btn styles */
 .btn{
   background-color: var(--light);
@@ -90,6 +113,11 @@ nav{
 
 .nav-link{
   margin:auto 1em auto 1em;
+  transition: all ease 0.2s;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  padding:2px 4px;
+  border-radius:5px;
+  
 }
 
 .nav-link a{
@@ -101,11 +129,23 @@ nav{
 }
 
 .nav-link:hover{
-  border-bottom: solid 2px black;
+  /* border-bottom: solid 2px black; */
+  transform: translateY(5px);
+}
+
+.nav-link:active{
+  transform: translateY(5px);
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  border-radius:20px;
+  padding:0.5px 6px;
 }
 
 .nav-link-active{
-  border-bottom: solid 2px black;
+  /* border-bottom: solid 2px black; */
+  transform: translateY(5px);
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(0,0,0,0.3);
+  padding:0.5px 6px;
+  border-radius:10px;
 }
 
 /* about page style */
