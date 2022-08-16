@@ -239,6 +239,7 @@ nav{
   height:12em;
   border-radius:1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all ease .4s;
 }
 
 .photo:hover {
@@ -272,6 +273,17 @@ nav{
   font-size: 1rem;
   font-weight:500;
 }
+
+.photo span{
+  transition: all ease .2s;
+}
+
+.photo span:hover{
+  margin:auto 10px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+
 
 
 /* reset default styles */
