@@ -7,18 +7,9 @@ function About(){
       <section className='about-container'>
         <img className='about-image' src={require(`../../assets/150.png`)} alt='Anthony'/>
         <p className='about-text'>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
+        Hi! I am Anthony Dcosta. I am a Community College Student majoring in Electrical Engineering. I am also training in a coding bootcamp by Michigan State Universty to become a web developer. This a collection of some of the projects I have worked on in the past. 
+        
+        Solving Algorithm related problem is my hobby and something I think about just before falling asleep. developing website allows me to apply this hobby of mine and at the same time allow others to validate my work. I am more than willing to take on web developing project.
         </p>
       </section>
     </>
