@@ -4,41 +4,41 @@ import Project from '../Project'
 function ProjectsView(){
    // initializing a state with list containing objects. Each objects contains
    // necessary infromation for rendering each projects
-   const [testObj, setTestObj] = useState([
+   const [testObj] = useState([
       {
          name: 'baseball-organizer',
          deployedLink:'#',
-         gitLink:"#"
+         gitLink:"https://github.com/pizzo1jr/Baseball-Organizer-"
       },
       {
          name: 'note-taker',
-         deployedLink:'#',
-         gitLink:'#'
+         deployedLink:'https://ancosta993.github.io/note-taker',
+         gitLink:'https://github.com/ancosta993/note-taker'
       },
       {
          name: 'run-buddy',
-         deployedLink:'#',
-         gitLink:'#'
+         deployedLink:'https://ancosta993.github.io/run-buddy/',
+         gitLink:'https://github.com/ancosta993/run-buddy'
       },
       {
          name: 'stream-searcher',
-         deployedLink:'#',
-         gitLink:'#'
+         deployedLink:'https://dcolli50.github.io/Stream-Searcher/',
+         gitLink:'https://github.com/Dcolli50/Stream-Searcher'
       },
       {
          name: 'tech-blog',
          deployedLink:'#',
-         gitLink:'#'
+         gitLink:'https://github.com/ancosta993/tech-blog'
       },
       {
          name: 'work-day-schedular',
-         deployedLink:'#',
-         gitLink:'#'
+         deployedLink:'https://ancosta993.github.io/work-day-schedular',
+         gitLink:'https://github.com/ancosta993/work-day-schedular'
       },
       {
          name: 'zookeeper',
-         deployedLink:'#',
-         gitLink:'#'
+         deployedLink:'https://ancosta993.github.io/zookeepr',
+         gitLink:'https://github.com/ancosta993/zookeepr'
       },
       
    ])

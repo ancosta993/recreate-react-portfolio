@@ -4,6 +4,7 @@ import {formatProjName} from '../../utils/helpers'
 function Project({name, deployedLink, gitLink}){
 
    return(
+      // defining the skeleton code for displaying each projects. It is getting information from an object prop.
       <li className='photo'>
          <img className='photo-img'  
          alt='baseball-organizer' 
