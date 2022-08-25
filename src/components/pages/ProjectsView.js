@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Projects(){
+function ProjectsView(){
    
    return(
      <section className='project-container'>
@@ -74,4 +74,4 @@ function Projects(){
    )
 }
 
-export default Projects
+export default ProjectsView
