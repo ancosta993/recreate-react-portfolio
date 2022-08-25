@@ -1,74 +1,59 @@
 import React, {useState} from 'react';
+import Project from '../Project'
 
 function ProjectsView(){
+   // initializing a state with list containing objects. Each objects contains
+   // necessary infromation for rendering each projects
+   const [testObj, setTestObj] = useState([
+      {
+         name: 'baseball-organizer',
+         deployedLink:'#',
+         gitLink:"#"
+      },
+      {
+         name: 'note-taker',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      {
+         name: 'run-buddy',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      {
+         name: 'stream-searcher',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      {
+         name: 'tech-blog',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      {
+         name: 'work-day-schedular',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      {
+         name: 'zookeeper',
+         deployedLink:'#',
+         gitLink:'#'
+      },
+      
+   ])
    
    return(
      <section className='project-container'>
       <ul className='photo-group'>
-         <li className='photo'>
-
-            <img className='photo-img'  
-            alt='baseball-organizer' 
-            src={require('../../assets/projects/baseball-organizer.PNG')}/>
-
-            <div className='photo-text'>
-               Baseball Organizer
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-
-         </li>
-         <li className='photo'>
-            <img className='photo-img' 
-            alt='note-taker' 
-            src={require('../../assets/projects/note-taker.PNG')}/>
-            
-            <div className='photo-text'>
-               Note Taker
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
-         <li className='photo'>
-            <img className='photo-img' alt='run-buddy' src={require('../../assets/projects/run-buddy.PNG')}/>
-            <div className='photo-text'>
-               Run Buddy
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
-         <li className='photo'>
-            <img className='photo-img' alt='stream-searcher' src={require('../../assets/projects/stream-searcher.PNG')}/>
-            <div className='photo-text'>
-               Stream Searcher
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
-         <li className='photo'>
-            <img className='photo-img' alt='tech-blog' src={require('../../assets/projects/tech-blog.PNG')}/>
-            <div className='photo-text'>
-               Tech Blog
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
-         <li className='photo'>
-            <img className='photo-img' alt='work-day-schedular' src={require('../../assets/projects/work-day-schedular.PNG')}/>
-            <div className='photo-text'>
-               Work Schedular
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
-         <li className='photo'>
-            <img className='photo-img' alt='zookeeper' src={require('../../assets/projects/zookeeper.PNG')}/>
-            <div className='photo-text'>
-               Zookeeper
-               <a href='#'><span className='deployed'>Deployed</span></a>
-               <a href='#'><span className='git-repo'>Git Repo</span></a>
-            </div>
-         </li>
+         {/* each object from the loop is taken as props for rendering the 
+         'Project' component */}
+         {testObj.map(obj => {
+            return(
+               <Project name={obj.name} deployedLink={obj.deployedLink} gitLink={obj.gitLink}></Project>
+            )
+         })}
+         
       </ul>
      </section>
    )

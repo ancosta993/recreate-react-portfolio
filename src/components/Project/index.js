@@ -1,19 +1,21 @@
 import React from 'react';
+import {formatProjName} from '../../utils/helpers'
 
-function Project(){
-   <li className='photo'>
+function Project({name, deployedLink, gitLink}){
 
-      <img className='photo-img'  
-      alt='baseball-organizer' 
-      src={require('../../assets/projects/baseball-organizer.PNG')}/>
+   return(
+      <li className='photo'>
+         <img className='photo-img'  
+         alt='baseball-organizer' 
+         src={require(`../../assets/projects/${name}.PNG`)}/>
 
-      <div className='photo-text'>
-         Baseball Organizer
-         <a href='#'><span className='deployed'>Deployed</span></a>
-         <a href='#'><span className='git-repo'>Git Repo</span></a>
-      </div>
-
-   </li>
+         <div className='photo-text'>
+            {formatProjName(name)}
+            <a href={deployedLink}><span className='deployed'>Deployed</span></a>
+            <a href={gitLink}><span className='git-repo'>Git Repo</span></a>
+         </div>
+      </li>
+   )
 };
 
 export default Project;

@@ -3,13 +3,11 @@ export function validateEmail(email) {
    return re.test(String(email).toLowerCase());
  };
 
-function formatProjName(name){
+export function formatProjName(name){
   return name.includes('-') 
   ? 
   name.split('-').map(string => string[0].toUpperCase() + string.slice(1)).join(' ')
    : 
   name[0].toUpperCase() + name.slice(1);
 
- }
-
-console.log(formatProjName('note-taker'));
+};
