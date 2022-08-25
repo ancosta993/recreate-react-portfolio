@@ -1,16 +1,17 @@
 import React from 'react';
+import Nav from '../Nav';
 
-function Header({showStartPage, setShowStartPage}) {
-   const renderPortfolio = () =>{
-      setShowStartPage(!showStartPage)
-   }
-   return (
-      <div className = 'startPageContainer'>
-         <h1 className='startPageTitle'>Hi! Welcome To My Portfolio
-         </h1>
-         <button className='btn startPageBtn' onClick={() => {renderPortfolio()}}> Get Started </button>
-      </div>
+function Header({currentPage, handleCurrentPage}){
+
+   return(
+      <header className = 'nav-tabs'>
+         <h1 className='nav-title'>Anthony Dcosta</h1>
+         <Nav 
+            currentPage={currentPage} 
+            handleCurrentPage={handleCurrentPage}>
+          </Nav>
+      </header>
    )
-};
+}
 
-export default Header
+export default Header;

@@ -1,8 +1,8 @@
 import './App.css';
 import React, {useState} from 'react';
-import Header from './components/Header';
+import StartPage from './components/StartPage';
 import PortfolioPage from './components/PortfolioPage';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 
@@ -16,16 +16,16 @@ function App() {
   return (
     <>
       {showStartPage ? (
-        <Header 
+        <StartPage 
           showStartPage={showStartPage} 
           setShowStartPage={setShowStartPage}>
-        </Header>
+        </StartPage>
       ):(
         <>
-          <Nav 
+          <Header 
               currentPage={currentPage} 
               handleCurrentPage={handleCurrentPage}>
-          </Nav>
+          </Header>
           <main>
             <PortfolioPage
               currentPage={currentPage} 
